@@ -1,4 +1,9 @@
-var app = new Vue({
+
+// https://docs.github.com/en/rest/search#search-issues-and-pull-requests
+const sort_options = ['comments', 'reactions', 'reactions-+1', 'reactions--1', 'reactions-smile', 'reactions-thinking_face', 'reactions-heart', 'reactions-tada', 'interactions', 'created', 'updated']
+const order_options = ['desc', 'asc']
+
+let app = new Vue({
     el: '#app',
     data () {
         return {
@@ -21,7 +26,7 @@ var app = new Vue({
         search() {
             this.loading = true;
 
-            if (this.i == 0) {
+            if (this.i === 0) {
                 if (this.language) {
                     var params = {
                         params: {
@@ -31,7 +36,10 @@ var app = new Vue({
                 } else {
                     var params = {
                         params: {
-                          q: 'is:issue is:open'
+                            q: 'is:issue is:open org:python',
+                            per_page: 100,
+                            sort: sort_options[Math.floor(Math.random() * sort_options.length)],
+                            order: order_options[Math.floor(Math.random() * order_options.length)],
                         }
                     };
                 }
@@ -45,7 +53,7 @@ var app = new Vue({
                     }.bind(this));
             } else {
                 this.setIssue(this.response);
-                if (this.i == 5) {
+                if (this.i === 5) {
                     this.i = 0;
                 }
             }
