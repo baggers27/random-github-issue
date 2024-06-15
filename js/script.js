@@ -31,15 +31,19 @@ let app = new Vue({
                     var params = {
                         params: {
                           q: 'is:issue is:open language:'+this.language,
+                                     per_page: 100,
+                            sort: sort_options[Math.floor(Math.random() * sort_options.length)],
+                            order: order_options[Math.floor(Math.random() * order_options.length)],
                         }
                     };
                 } else {
                     var params = {
                         params: {
-                            q: 'is:issue is:open org:python',
-                            per_page: 100,
+                            q: 'is:issue is:open',
+                               per_page: 100,
                             sort: sort_options[Math.floor(Math.random() * sort_options.length)],
                             order: order_options[Math.floor(Math.random() * order_options.length)],
+                   
                         }
                     };
                 }
