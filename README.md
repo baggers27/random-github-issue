@@ -9,4 +9,4 @@ Find your issue in opened issues on GitHub.
 ![image](https://repository-images.githubusercontent.com/301069136/6ef96600-062f-11eb-9617-2e1d6de75589)
 
 ### Contributors
-Constributions in this [2020 hacktoberfest](https://hacktoberfest.digitalocean.com/) time is very welcomed! #hacktoberfest
+Thanks to arturssmirnovs and hugovk for creating the original code base and subsequent edits.
