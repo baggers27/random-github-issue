@@ -1,7 +1,7 @@
 # Random GitHub issue finder
-## If you don't have issue, get one!
+## If you don't have an issue, get one!
 
-This small project help's you to find random issue on GitHub, get started and contribute to open source!
+This small project helps you to find random issues on GitHub, get started and contribute to open source!
 Find your issue in opened issues on GitHub.
 
 [Check out this tool here.](https://randomgithubissue.com/)
